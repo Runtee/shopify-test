@@ -14,7 +14,9 @@ app.use(cors());
 
 app.use('/inventory', inventoriesRoutes);
 app.use('/warehouse', warehousesRoutes);
-
+app.get('/',(req,res)=>{
+    res.redirect('/inventory')
+})
 
 app.listen(5000, (error) => {
     if (error) {
